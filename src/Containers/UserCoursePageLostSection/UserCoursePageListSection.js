@@ -1,6 +1,7 @@
 import { useState } from "react";
 import classes from "./UserCoursePageListSection.module.css";
 import SectionsNav from "../../Components/SectionsNav/SectionsNav";
+import CourseCard from "../../Components/CourseCard/CourseCard";
 
 const UserCoursePageListSection = () => {
   // States
@@ -18,6 +19,9 @@ const UserCoursePageListSection = () => {
           setNavItems={setNavItems}
           style={{ flexBasis: "33.3%" }}
         />
+      </div>
+      <div className={classes.courseListSection}>
+        <CourseCard />
       </div>
     </section>
   );

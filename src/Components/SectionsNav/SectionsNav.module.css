@@ -1,10 +1,8 @@
 .container {
   width: 100%;
   margin: 1em 0;
-  /* position: sticky;
-  top: 10vh; */
   background: #fcfcfc;
-  z-index: 4;
+  z-index: 1;
   position: sticky;
   top: 10vh;
 }
@@ -12,7 +10,6 @@
 .listNav {
   display: flex;
   justify-content: space-between;
-  /* border: 1px solid green; */
   align-items: center;
   width: 100%;
   overflow-x: scroll;
@@ -26,7 +23,6 @@
 
 .div {
   border-bottom: 2px solid #f2f3f8;
-  /* width: 33.3%; */
   text-align: center;
   padding: 0.5em 0;
   font-family: Poppins;
