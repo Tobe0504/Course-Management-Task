@@ -1,0 +1,86 @@
+.container {
+  padding: 80px 100px;
+  background-image: url("https://res.cloudinary.com/dmpdhnjqs/image/upload/v1695722316/searchBackgroundImage_ijei8b.png");
+}
+
+.inputSection {
+  height: 74px;
+  position: relative;
+  width: 80%;
+  margin: auto;
+}
+
+.inputSection > input {
+  width: 100%;
+  height: 100%;
+  font-family: Poppins;
+  color: var(--purple);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.8px;
+  padding: 0 2rem;
+  outline: none;
+  border-radius: 10px;
+  background: #fff;
+  border: none;
+}
+
+.inputSection > input::placeholder {
+  color: rgba(131, 131, 154, 0.6);
+}
+
+.buttonSection {
+  width: 183.163px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 8px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .container {
+    padding: 80px 1.5rem;
+  }
+
+  .inputSection {
+    height: 44px;
+    width: 90%;
+  }
+
+  .inputSection > input {
+    font-size: 14px;
+    letter-spacing: auto;
+    padding: 0 1rem;
+  }
+
+  .buttonSection {
+    width: 133.163px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    padding: 80px 1.5rem;
+  }
+
+  .inputSection {
+    height: 34px;
+    width: 100%;
+  }
+
+  .inputSection > input {
+    font-size: 12px;
+    letter-spacing: auto;
+    padding: 0 1rem;
+  }
+
+  .buttonSection {
+    width: 100.163px;
+  }
+}

@@ -1,0 +1,45 @@
+.button {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 0.5rem 0;
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.button:hover {
+  transform: scale(0.9);
+}
+
+.primary {
+  background: var(--buttonGreen);
+}
+
+.secondary {
+  border: 1px solid var(--buttonGreen);
+  background: var(--white);
+  color: var(--buttonGreen);
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .button {
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .button {
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+    padding: 0.3rem 0;
+  }
+}

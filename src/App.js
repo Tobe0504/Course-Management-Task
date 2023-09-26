@@ -1,7 +1,7 @@
-import Layout from "./Components/Layout/Layout";
+import UserCoursesPage from "./Pages/UserCoursesPage/UserCoursesPage";
 
 function App() {
-  return <Layout>Hmm</Layout>;
+  return <UserCoursesPage />;
 }
 
 export default App;
