@@ -1,0 +1,77 @@
+.container {
+  border: 2px solid red;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  padding: 0 120px;
+}
+
+.container h1 {
+  color: #5b5b5b;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.container > div:nth-child(2) {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.container > div:nth-child(2):hover {
+  background: #e8e8e8;
+}
+
+.container > div:nth-child(2) > img {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border: 2px solid #5b5b5b;
+  border-radius: 50%;
+}
+
+.container > div:nth-child(2) > span {
+  color: #000;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.36px;
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .container > div:nth-child(2) {
+    display: none;
+  }
+
+  .container h1 {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .container > div:nth-child(2) {
+    display: none;
+  }
+
+  .container h1 {
+    font-size: 16px;
+  }
+}
