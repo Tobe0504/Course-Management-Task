@@ -1,0 +1,14 @@
+.container {
+  position: relative;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  height: 10vh;
+  background: var(--white);
+}
+
+.body {
+  min-height: 90vh;
+}
