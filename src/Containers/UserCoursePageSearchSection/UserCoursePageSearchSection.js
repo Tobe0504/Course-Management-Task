@@ -7,7 +7,7 @@ const UserCoursePageSearchSection = () => {
       <div className={classes.inputSection}>
         <input type="text" placeholder="Search your favourite course" />
         <div className={classes.buttonSection}>
-          <Button type="primary">New button</Button>
+          <Button type="primary">Search</Button>
         </div>
       </div>
     </section>
