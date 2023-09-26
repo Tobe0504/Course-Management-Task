@@ -1,6 +1,13 @@
 import classes from "./CourseCard.module.css";
+import Button from "../../Components/Button/Button";
+import capitalize from "../../Utilities/capitalize";
+import { useContext } from "react";
+import { AppContext } from "../../Context/AppContext";
 
-const CourseCard = () => {
+const CourseCard = ({ data, index }) => {
+  // Context
+  const { isEnrollingActiveHandler } = useContext(AppContext);
+
   return (
     <div className={classes.container}>
       <div className={classes.imageSection}>
@@ -52,20 +59,35 @@ const CourseCard = () => {
                 stroke="#D9D9D9"
               />
             </svg>
-            <span>Design</span>
+            <span>{capitalize(data?.category)}</span>
           </span>
-          <span>Duration: 3 months</span>
+          <span>Duration: {data?.durationInMonths} months</span>
         </div>
-        <h4 className={classes.nameSection}>
-          AWS Certified solutions Architect
-        </h4>
-        <p className={classes.description}>
-          Lorem ipsum dolor sit amet, consectetur adipising elit, sed do eiusmod
-          tempor
-        </p>
+        <h4 className={classes.nameSection}>{data?.title}</h4>
+        <p className={classes.description}>{data?.description}</p>
         <div className={classes.tutorSection}>
-          <span>Tutor</span>
-          <span>$80</span>
+          <span>Tutor: {data?.tutor}</span>
+          <span>
+            {data.isEnrolling ? (
+              <Button
+                type="secondary"
+                onClick={() => {
+                  isEnrollingActiveHandler(data.title);
+                }}
+              >
+                Disenroll
+              </Button>
+            ) : (
+              <Button
+                type="primary"
+                onClick={() => {
+                  isEnrollingActiveHandler(data.title);
+                }}
+              >
+                Enroll
+              </Button>
+            )}
+          </span>
         </div>
       </div>
     </div>

@@ -81,7 +81,7 @@
 .tutorSection > span:nth-child(1) {
   color: var(--black);
   font-family: Poppins;
-  font-size: 18px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -89,11 +89,5 @@
 }
 
 .tutorSection > span:nth-child(2) {
-  color: var(--buttonGreen);
-  font-family: Poppins;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: 0.48px;
+  width: 100px;
 }
