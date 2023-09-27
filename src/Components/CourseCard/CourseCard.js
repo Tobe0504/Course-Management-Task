@@ -11,10 +11,7 @@ const CourseCard = ({ data, index }) => {
   return (
     <div className={classes.container}>
       <div className={classes.imageSection}>
-        <img
-          src="https://res.cloudinary.com/dmpdhnjqs/image/upload/v1695719312/cld-sample-5.jpg"
-          alt="Name"
-        />
+        <img src={data.image} alt="Name" />
       </div>
       <div className={classes.textSection}>
         <div className={classes.categoryAndTime}>

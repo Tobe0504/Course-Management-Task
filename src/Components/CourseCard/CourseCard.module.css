@@ -10,12 +10,13 @@
 
 .imageSection {
   width: 100%;
-  /* height: 238.655px; */
+  height: 238.655px;
 }
 
 .imageSection > img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .textSection {

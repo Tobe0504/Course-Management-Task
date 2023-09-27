@@ -10,7 +10,7 @@ const UserCoursePageListSection = () => {
   // States
   const [navItems, setNavItems] = useState([
     { title: "All", isActive: true },
-    { title: "Ongoing", isActive: false },
+    { title: "Enrolling", isActive: false },
     { title: "Completed", isActive: false },
   ]);
 

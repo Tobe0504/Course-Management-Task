@@ -3,6 +3,7 @@
   display: flex;
   align-items: center;
   padding: 0 120px;
+  position: relative;
 }
 
 .container h1 {
@@ -47,6 +48,30 @@
   letter-spacing: 0.36px;
 }
 
+.weather {
+  position: absolute;
+  top: 10vh;
+  width: 100%;
+  left: 0;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: hsl(197, 71%, 73%, 0.5);
+  color: var(--purple);
+  flex-wrap: wrap;
+}
+
+.weather > span {
+  color: #696984;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 180%; /* 25.2px */
+  letter-spacing: 0.28px;
+}
+
 @media screen and (min-width: 767px) and (max-width: 1023px) {
   .container {
     padding: 0 1.5rem;
@@ -72,5 +97,11 @@
 
   .container h1 {
     font-size: 16px;
+  }
+
+  .weather > span:nth-child(3),
+  .weather > span:nth-child(4),
+  .weather > span:nth-child(5) {
+    display: none;
   }
 }
