@@ -5,6 +5,9 @@ import { courses } from "../Utilities/courses";
 export const AppContext = createContext();
 
 const AppContextProvider = ({ children }) => {
+  // Local storage variables
+  const localUsername = localStorage.getItem("course-task-user");
+
   // States
   const [searchKeyWord, setSearchKeyWord] = useState("");
   const [userCourses, setUserCourses] = useState(
@@ -21,6 +24,14 @@ const AppContextProvider = ({ children }) => {
     error: null,
     data: null,
   });
+  const [userName, setUserName] = useState(localUsername);
+  // States
+  const [displayModal, setDisplayModal] = useState(false);
+
+  // Save user
+  const saveUser = () => {
+    localStorage.setItem("course-task-user", userName);
+  };
 
   useEffect(() => {
     if (searchKeyWord) {
@@ -122,6 +133,11 @@ const AppContextProvider = ({ children }) => {
         searchKeyWord,
         setSearchKeyWord,
         weatherResponse,
+        saveUser,
+        userName,
+        setUserName,
+        displayModal,
+        setDisplayModal,
       }}
     >
       {children}

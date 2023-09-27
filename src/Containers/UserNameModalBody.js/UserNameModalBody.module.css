@@ -1,0 +1,48 @@
+.container {
+  height: 100%;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container > h4 {
+  color: #252641;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.container > p {
+  color: var(--blackAlt, #2d3436);
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  margin: 0.5em 0;
+}
+
+.container > input {
+  width: 100%;
+  font-family: Poppins;
+  color: var(--purple);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.8px;
+  padding: 0.5rem 1rem;
+  outline: none;
+  border-radius: 10px;
+  background: #fff;
+  margin-top: 1rem;
+  border: 1px solid #999999;
+}
+
+.buttonSection {
+  margin: 1rem auto;
+  width: 100%;
+}

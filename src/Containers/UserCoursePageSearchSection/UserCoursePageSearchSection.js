@@ -3,7 +3,7 @@ import Button from "../../Components/Button/Button";
 import { AppContext } from "../../Context/AppContext";
 import classes from "./UserCoursePageSearchSection.module.css";
 
-const UserCoursePageSearchSection = () => {
+const UserCoursePageSearchSection = ({ courseListRef }) => {
   // Context
   const { searchKeyWord, setSearchKeyWord } = useContext(AppContext);
   return (
@@ -18,7 +18,16 @@ const UserCoursePageSearchSection = () => {
           }}
         />
         <div className={classes.buttonSection}>
-          <Button type="primary">Search</Button>
+          <Button
+            type="primary"
+            onClick={() => {
+              if (searchKeyWord && courseListRef?.current) {
+                courseListRef.current.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+          >
+            Search
+          </Button>
         </div>
       </div>
     </section>

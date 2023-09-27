@@ -4,16 +4,21 @@ import classes from "./Header.module.css";
 
 const Header = () => {
   // Context
-  const { weatherResponse } = useContext(AppContext);
+  const { weatherResponse, userName, setDisplayModal } = useContext(AppContext);
+
   return (
     <section className={classes.container}>
       <h1>Course Management </h1>
-      <div>
+      <div
+        onClick={() => {
+          setDisplayModal(true);
+        }}
+      >
         <img
           src="https://res.cloudinary.com/dmpdhnjqs/image/upload/v1695719548/user_fn3ixd.png"
           alt="User"
         />
-        <span>User</span>
+        <span>{userName || "User"}</span>
       </div>
       <div className={classes.weather}>
         <span>Weather:</span>
