@@ -25,7 +25,6 @@ const AppContextProvider = ({ children }) => {
     data: null,
   });
   const [userName, setUserName] = useState(localUsername);
-  // States
   const [displayModal, setDisplayModal] = useState(false);
 
   // Save user
@@ -33,6 +32,7 @@ const AppContextProvider = ({ children }) => {
     localStorage.setItem("course-task-user", userName);
   };
 
+  // Filter search based on search key
   useEffect(() => {
     if (searchKeyWord) {
       const newCourses = courses.filter((data) => {
@@ -80,7 +80,7 @@ const AppContextProvider = ({ children }) => {
       });
       axios
         .get(
-          `https://api.openweathermap.org/data/2.5/weather?lat=${userLocationState.latitude}&lon=${userLocationState.longitude}&appid=d5b5421e60a594af5e4605182e20ce49&units=metric`
+          `${process.env.REACT_APP_WEATHER_API_DOMAIN}/data/2.5/weather?lat=${userLocationState.latitude}&lon=${userLocationState.longitude}&appid=${process.env.REACT_APP_WEATHER_API_KEY}&units=metric`
         )
         .then((res) => {
           setWeatherResponse({
