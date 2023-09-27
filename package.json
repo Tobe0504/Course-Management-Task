@@ -1,5 +1,6 @@
 {
   "name": "course-management-task",
+  "homepage": "http://tobe0405.github.io/Course-Management-Task",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
