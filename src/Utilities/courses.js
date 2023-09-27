@@ -55,7 +55,7 @@ export const courses = [
     category: "tech",
     durationInMonths: 3,
     tutor: "Mark Zuckerberg",
-    isCompleted: false,
+    isCompleted: true,
     image:
       "https://res.cloudinary.com/dmpdhnjqs/image/upload/v1695741161/prodManagement_gvxtzl.jpg",
   },

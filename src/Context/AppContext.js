@@ -58,12 +58,17 @@ const AppContextProvider = ({ children }) => {
   let userLocation = navigator.geolocation;
   function getLocation() {
     if (userLocation) {
-      console.log(userLocation.getCurrentPosition(success));
+      setWeatherResponse({
+        isLoading: true,
+        data: null,
+        error: null,
+      });
+      userLocation.getCurrentPosition(success);
     } else {
       setWeatherResponse({
         isLoading: false,
         data: null,
-        error: "Geolocation is  ot supported by thus browser",
+        error: "Geolocation is not supported by this browser",
       });
     }
   }

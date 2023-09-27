@@ -22,9 +22,9 @@ const Header = () => {
       </div>
       <div className={classes.weather}>
         <span>Weather:</span>
-        {!weatherResponse.data || weatherResponse.isLoading ? (
+        {weatherResponse.isLoading ? (
           <span>Loading...</span>
-        ) : !weatherResponse.data && weatherResponse.error ? (
+        ) : weatherResponse.error ? (
           <span>{weatherResponse?.error}</span>
         ) : (
           <>
