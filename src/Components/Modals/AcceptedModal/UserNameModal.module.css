@@ -15,7 +15,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  max-height: 550px;
+  max-height: 450px;
   z-index: 12;
   overflow: hidden;
   background-color: white;
@@ -62,5 +62,6 @@
   .modal {
     width: 90%;
     min-height: 60vh;
+    height: 40vh;
   }
 }

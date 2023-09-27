@@ -77,12 +77,20 @@
     padding: 0 1.5rem;
   }
 
-  .container > div:nth-child(2) {
+  .container > div:nth-child(2) > span:nth-child(2) {
     display: none;
+  }
+
+  .container > div:nth-child(2) > img {
+    width: 24px;
+    height: 24px;
   }
 
   .container h1 {
     font-size: 16px;
+  }
+  .weather > span {
+    font-size: 12px;
   }
 }
 
@@ -91,8 +99,13 @@
     padding: 0 1.5rem;
   }
 
-  .container > div:nth-child(2) {
+  .container > div:nth-child(2) > span:nth-child(2) {
     display: none;
+  }
+
+  .container > div:nth-child(2) > img {
+    width: 24px;
+    height: 24px;
   }
 
   .container h1 {
@@ -103,5 +116,9 @@
   .weather > span:nth-child(4),
   .weather > span:nth-child(5) {
     display: none;
+  }
+
+  .weather > span {
+    font-size: 12px;
   }
 }

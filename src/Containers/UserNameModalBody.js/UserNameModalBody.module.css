@@ -34,7 +34,7 @@
   font-weight: 400;
   line-height: normal;
   letter-spacing: 0.8px;
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 1rem;
   outline: none;
   border-radius: 10px;
   background: #fff;
@@ -45,4 +45,34 @@
 .buttonSection {
   margin: 1rem auto;
   width: 100%;
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .container > h4 {
+    font-size: 18px;
+  }
+
+  .container > p {
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  .container > input {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container > h4 {
+    font-size: 18px;
+  }
+
+  .container > p {
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  .container > input {
+    font-size: 14px;
+  }
 }
